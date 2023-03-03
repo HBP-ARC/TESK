@@ -1,38 +1,15 @@
+# usage: ./taskCreate <JSON payload> <tes-endpoint> <token>
+# example: ./taskCreate localftp/taskWithIO.json https://tes-ebrains.apps-dev.hbp.eu $TOKEN
 
-
-# 
-# Usage:
-# 
-# 1. Update 'baseUrl' (below)
-# 
-# 2. Call this script
-# 
-#         taskCreate <JSON payload>
-# 
-#     e.g.
-# 
-#         taskCreate localftp/taskWithIO.json
-# 
-
-# $ minikube service list
-# |-------------|----------------------|-----------------------------|
-# |  NAMESPACE  |         NAME         |             URL             |
-# |-------------|----------------------|-----------------------------|
-# | default     | kubernetes           | No node port                |
-# | default     | tesk-api             | http://192.168.99.100:31934 |    <= baseUrl
-# | kube-system | kube-dns             | No node port                |
-# | kube-system | kubernetes-dashboard | No node port                |
-# |-------------|----------------------|-----------------------------|
-
-baseUrl='http://192.168.99.100:31209'
-
-jsonFile="$1"
+jsonFile=$1
+baseUrl=$2
+token=$3
 
 curl -iv                                    \
 -X POST                                     \
 -s                                          \
---header 'Content-Type: application/json'   \
---header 'Accept: application/json'         \
+--header "Content-Type: application/json"   \
+--header "Accept: application/json"         \
+--header "Authorization: Bearer ${token}"   \
 -d "@${jsonFile}"                           \
-"$baseUrl/v1/tasks"
-
+"$baseUrl/ga4gh/tes/v1/tasks"

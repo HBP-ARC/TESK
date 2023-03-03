@@ -1,0 +1,8 @@
+# usage: ./taskCancel <task-id> <tes-endpoint> <token>
+# example: ./taskCancel task-05f2b0ac https://tes-ebrains.apps-dev.hbp.eu $TOKEN
+
+taskID=$1
+baseUrl=$2
+token=$3
+
+curl -i -X POST "$baseUrl/ga4gh/tes/v1/tasks/$taskID:cancel" --header "Authorization: Bearer $token"

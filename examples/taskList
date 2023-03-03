@@ -1,3 +1,7 @@
+# usage: ./taskList <tes-endpoint> <token>
+# example: ./taskList https://tes-ebrains.apps-dev.hbp.eu $TOKEN
 
-curl -i http://192.168.99.100:31934/v1/tasks
+baseUrl=$1
+token=$2
 
+curl -i -X GET "$baseUrl/ga4gh/tes/v1/tasks?view=FULL" --header "Authorization: Bearer $token"
