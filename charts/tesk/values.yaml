@@ -3,31 +3,31 @@
 # Declare variables to be passed into your templates.
 
 # host_name: tes.tsi.ebi.ac.uk
-host_name: ""
+host_name: tes-ebrains.apps-dev.hbp.eu
 # There are two options here: "openshift" or "kubernetes"
-clusterType: kubernetes
+clusterType: openshift
 #
 #
 #
 
 # 'openstack' or 's3'
-storage: none
+storage: s3
 
 # Configurable storage class. 
-storageClass: 
+storageClass: managed-nfs-storage
 
 tesk:
     # if empty - default base path; currently /ga4gh/tes/v1
     #tes_api_base_path:
     # For backwards compatibility with TES 0.3 - old base bath
     tes_api_base_path: /ga4gh/tes/v1
-    image: docker.io/elixircloud/tesk-api:1.1.0
+    image: docker-registry.ebrains.eu/tc/tesk/tesk-api:v1.1
     port: 8080
-    taskmaster_image_name:  docker.io/elixircloud/tesk-core-taskmaster
+    taskmaster_image_name:  docker-registry.ebrains.eu/tc/tesk/taskmaster
     taskmaster_image_version: v0.10.0
-    taskmaster_filer_image_name: docker.io/elixircloud/tesk-core-filer
+    taskmaster_filer_image_name: docker-registry.ebrains.eu/tc/tesk/filer
     taskmaster_filer_image_version: v0.10.0
-    debug: false
+    debug: true
     executor_retries: 2
     filer_retries: 2
 
@@ -45,10 +45,12 @@ transfer:
 auth:
     # the following variables are specific to each deployment
     # mode: auth/noauth
-    mode: noauth
+    mode: auth
     # EBI/CSC
-    env_subgroup: CSC
-    env_basegroup: ECP_CLN
+    env_subgroup: "ENV_SUBGROUP"
+    env_basegroup: "PARENT_GROUP:ENV_SUBGROUP"
+    client_id: none
+    client_secret: none
 
 service:
     # the following variables are specific to each deployment
