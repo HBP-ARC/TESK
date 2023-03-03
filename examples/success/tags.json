@@ -3,7 +3,7 @@
   "description": "Well, nothing happens here. Just observe that executor spec, name, description and tags appear in the output",
   "executors": [
     {
-      "image": "alpine",
+      "image": "docker-registry.ebrains.eu/tc/python:3.8-alpine",
       "command": [
         "sh",
         "-c",

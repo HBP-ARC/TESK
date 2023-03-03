@@ -1,0 +1,20 @@
+{
+    "description": "Demonstrates handling single s3 file input.",
+    "inputs": [
+      {
+        "url": "s3://datasets/hbp-01852_sub-1_chs-32_hem-RH_ana-ISO000_stim-SPN.smr",
+        "path": "/tes/volumes/input.smr",
+        "type": "FILE"
+      }
+    ],
+    "executors": [
+      {
+        "image": "docker-registry.ebrains.eu/tc/python:3.8-alpine",
+        "command": [
+          "ls",
+          "/tes/volumes/input.smr"
+        ]
+      }
+    ]
+  }
+  

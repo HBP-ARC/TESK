@@ -2,14 +2,14 @@
   "description": "Should finish in EXECUTOR_ERROR. Don't run on Kubernetes older than 1.8 (will recreate the executor pod forever). Third executor should not run.",
   "executors": [
     {
-      "image": "alpine",
+      "image": "docker-registry.ebrains.eu/tc/python:3.8-alpine",
       "command": [
         "echo",
         "You will see this in the logs (stdout)."
       ]
     },
     {
-      "image": "alpine",
+      "image": "docker-registry.ebrains.eu/tc/python:3.8-alpine",
       "command": [
         "sh",
         "-c",
@@ -17,7 +17,7 @@
       ]
     },
     {
-      "image": "alpine",
+      "image": "docker-registry.ebrains.eu/tc/python:3.8-alpine",
       "command": [
         "echo",
         "This shouldn't appear in the logs (stdout)."

@@ -10,7 +10,7 @@
       "env": {
         "SECRET_PROJECT_NAME": "TESK"
       },
-      "image": "alpine",
+      "image": "docker-registry.ebrains.eu/tc/python:3.8-alpine",
       "stderr": "/tes/err",
       "stdout": "/tes/output",
       "workdir": "/tes"

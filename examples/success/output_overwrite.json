@@ -10,7 +10,7 @@
   ],
   "executors": [
     {
-      "image": "alpine",
+      "image": "docker-registry.ebrains.eu/tc/python:3.8-alpine",
       "command": [
         "echo",
         "This goes to file1"
@@ -18,7 +18,7 @@
       "stdout": "/tes/file1.txt"
     },
     {
-      "image": "alpine",
+      "image": "docker-registry.ebrains.eu/tc/python:3.8-alpine",
       "command": [
         "sh",
         "-c",

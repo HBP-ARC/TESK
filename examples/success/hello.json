@@ -3,7 +3,7 @@
   "description": "Hello World, inspired by Funnel's most basic example",
   "executors": [
     {
-      "image": "alpine",
+      "image": "docker-registry.ebrains.eu/tc/python:3.8-alpine",
       "command": [
         "echo",
         "TESK says: Hello World"

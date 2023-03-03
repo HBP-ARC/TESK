@@ -2,7 +2,7 @@
   "description": "Request for more cpu than any nodes - will be Pending forever. TODO - what shall we do in such case?",
   "executors": [
     {
-      "image": "alpine",
+      "image": "docker-registry.ebrains.eu/tc/python:3.8-alpine",
       "command": [
         "echo",
         "Nothing"

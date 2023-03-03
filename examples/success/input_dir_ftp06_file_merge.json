@@ -19,7 +19,7 @@
   ],
   "executors": [
     {
-      "image": "alpine",
+      "image": "docker-registry.ebrains.eu/tc/python:3.8-alpine",
       "command": [
         "sh",
         "-c",
@@ -28,7 +28,7 @@
       "workdir": "/tes/old-tools"
     },
     {
-      "image": "alpine",
+      "image": "docker-registry.ebrains.eu/tc/python:3.8-alpine",
       "command": [
         "sh",
         "-c",

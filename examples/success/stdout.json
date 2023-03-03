@@ -13,7 +13,7 @@
       "stdout": "/outputs/stdout"
     },
     {
-      "image": "alpine",
+      "image": "docker-registry.ebrains.eu/tc/python:3.8-alpine",
       "command": [
         "cat",
         "/outputs/stdout"

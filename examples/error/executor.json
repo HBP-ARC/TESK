@@ -2,7 +2,7 @@
   "description": "Should finish in EXECUTOR_ERROR. Don't run on Kubernetes older than 1.8 (will recreate the executor pod forever)",
   "executors": [
     {
-      "image": "alpine",
+      "image": "docker-registry.ebrains.eu/tc/python:3.8-alpine",
       "command": [
         "sh",
         "-c",
