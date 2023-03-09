@@ -2,6 +2,3 @@
 *.pyc
 #*.yaml
 !/deployment/wes-tes/**
-
-s3-config/config
-s3-config/credentials

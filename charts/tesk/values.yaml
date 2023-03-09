@@ -3,7 +3,7 @@
 # Declare variables to be passed into your templates.
 
 # host_name: tes.tsi.ebi.ac.uk
-host_name: tes.okd-dev.hbp.eu
+host_name: tes.apps-dev.hbp.eu
 # There are two options here: "openshift" or "kubernetes"
 clusterType: openshift
 #
