@@ -34,6 +34,12 @@ To deploy the application:
 $ helm upgrade --install tesk-release . -f secrets.yaml -f values.yaml
 ```
 
+or, if a `secrets.yaml` file is not needed (no FTP storage backend or OIDC client):
+
+```bash
+$ helm upgrade --install tesk-release . -f values.yaml
+```
+
 then you can check it all went as expected:
 
 ```bash
